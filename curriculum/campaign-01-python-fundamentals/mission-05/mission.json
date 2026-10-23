@@ -1,0 +1,20 @@
+{
+  "id": "campaign-01-python-fundamentals/mission-05",
+  "order": 5,
+  "title": "Order Total Calculator",
+  "difficulty": 2,
+  "estimated_minutes": 25,
+  "xp_reward": 15,
+  "type": "pytest",
+  "submission": "workspace/totals.py",
+  "test_path": "tests",
+  "prerequisites": {"missions": ["campaign-01-python-fundamentals/mission-04"], "skills": {}},
+  "skills": {"python_core": 2},
+  "grants_achievement": null,
+  "hints": [
+    "*item_prices sammelt beliebig viele positional Args in ein tuple -- das Pendant zu Kotlins vararg. **surcharges sammelt beliebige keyword-Args in ein dict -- es gibt kein direktes Kotlin-Aequivalent, am naechsten kommt ein Map<String, Double> als letzter Parameter.",
+    "Reihenfolge der Berechnung: (1) Summe der item_prices + Summe der surcharges-Werte + shipping, (2) DANACH Steuer auf die Zwischensumme anwenden.",
+    "round(wert, 2) rundet auf 2 Nachkommastellen -- nutze es erst auf das Endergebnis, nicht auf Zwischenschritte.",
+    "def calculate_total(*item_prices, tax_rate=0.0, shipping=0.0, **surcharges):\n    if tax_rate < 0:\n        raise ValueError(\"tax_rate must not be negative\")\n    if any(p < 0 for p in item_prices) or shipping < 0 or any(v < 0 for v in surcharges.values()):\n        raise ValueError(\"prices must not be negative\")\n    subtotal = sum(item_prices) + sum(surcharges.values()) + shipping\n    return round(subtotal * (1 + tax_rate / 100), 2)"
+  ]
+}

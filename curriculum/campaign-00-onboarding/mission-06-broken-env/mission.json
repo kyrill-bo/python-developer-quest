@@ -1,0 +1,19 @@
+{
+  "id": "campaign-00-onboarding/mission-06-broken-env",
+  "order": 6,
+  "title": "Diagnose: The Broken Environment",
+  "difficulty": 2,
+  "estimated_minutes": 20,
+  "xp_reward": 20,
+  "type": "check_script",
+  "check_function": "diagnose_broken_env",
+  "prerequisites": {"missions": ["campaign-00-onboarding/mission-05-first-test"], "skills": {}},
+  "skills": {"python_core": 2},
+  "grants_achievement": "environment_operator",
+  "hints": [
+    "Oeffne workspace/app_config.json in einem Editor und versuche, sie mit `python3 -m json.tool workspace/app_config.json` zu parsen -- der Fehler zeigt dir exakt die kaputte Stelle.",
+    "Es gibt mehrere unabhaengige Probleme: ungueltige JSON-Syntax UND falsche Datentypen fuer das erwartete Schema. Behebe beides.",
+    "Erwartetes Schema: app_name (nicht-leerer String), debug (JSON-Boolean true/false, kein String 'true'), max_connections (Ganzzahl 1-1000, kein String, kein Float), allowed_hosts (nicht-leere Liste von Strings).",
+    "Haeufige Fehler in dieser Datei: ein trailing comma, debug als String statt Boolean, max_connections als String oder ausserhalb des erlaubten Bereichs, allowed_hosts leer oder kein Array."
+  ]
+}

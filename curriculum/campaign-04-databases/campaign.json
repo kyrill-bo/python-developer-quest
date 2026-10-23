@@ -1,0 +1,17 @@
+{
+  "id": "campaign-04-databases",
+  "order": 4,
+  "title": "Campaign 4: Database Engineer",
+  "summary": "Relationales Datenmodell, SQL, PostgreSQL, SQLAlchemy, Migrationen, Transaktionen und Query-Optimierung -- angewendet auf eine transaktionale Order-Persistenzschicht.",
+  "topics": [
+    "Relational database concepts", "SQL", "PostgreSQL", "Table design",
+    "Primary/foreign keys", "Constraints", "Indexes", "Transactions",
+    "Isolation levels", "SQLAlchemy", "ORM vs. raw SQL", "Migrations",
+    "Connection management", "N+1 queries", "Query optimization",
+    "Data integrity", "Database testing"
+  ],
+  "skill_tracks": ["databases", "testing"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-02-advanced-python"],
+  "boss_fight": "Implementiere eine zuverlaessige Persistenzschicht fuer einen transaktionalen Order-Service."
+}

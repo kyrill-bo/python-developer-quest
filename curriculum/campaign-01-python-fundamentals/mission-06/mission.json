@@ -1,0 +1,20 @@
+{
+  "id": "campaign-01-python-fundamentals/mission-06",
+  "order": 6,
+  "title": "Safe Order Parser",
+  "difficulty": 3,
+  "estimated_minutes": 30,
+  "xp_reward": 25,
+  "type": "pytest",
+  "submission": "workspace/order_parser.py",
+  "test_path": "tests",
+  "prerequisites": {"missions": ["campaign-01-python-fundamentals/mission-05"], "skills": {}},
+  "skills": {"python_core": 2, "python_advanced": 1},
+  "grants_achievement": null,
+  "hints": [
+    "Eine eigene Exception-Klasse ist in Python nur `class OrderValidationError(Exception): pass` -- kein Checked-Exception-System wie in Java, kein `throws` in der Signatur noetig.",
+    "Pruefe die Felder in fester Reihenfolge (order_id, quantity, unit_price) und raise bei der ERSTEN gefundenen Verletzung -- nicht alle Fehler sammeln.",
+    "Fuer unit_price: wenn der Wert kein int/float ist (z.B. ein String), fange den Fehler beim Cast explizit und raise stattdessen OrderValidationError -- nutze `raise ... from exc` fuer korrektes Exception-Chaining.",
+    "class OrderValidationError(Exception):\n    pass\n\ndef parse_order(raw: dict) -> dict:\n    order_id = raw.get(\"order_id\")\n    if not isinstance(order_id, str) or not order_id:\n        raise OrderValidationError(\"order_id must be a non-empty string\")\n    quantity = raw.get(\"quantity\")\n    if not isinstance(quantity, int) or isinstance(quantity, bool) or quantity <= 0:\n        raise OrderValidationError(\"quantity must be a positive integer\")\n    try:\n        unit_price = float(raw[\"unit_price\"])\n    except (KeyError, TypeError, ValueError) as exc:\n        raise OrderValidationError(\"unit_price must be numeric\") from exc\n    if unit_price <= 0:\n        raise OrderValidationError(\"unit_price must be positive\")\n    return {\"order_id\": order_id, \"quantity\": quantity, \"unit_price\": unit_price, \"notes\": raw.get(\"notes\", \"\")}"
+  ]
+}

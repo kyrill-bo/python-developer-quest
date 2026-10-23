@@ -1,0 +1,6 @@
+{
+    "app_name": "",
+    "debug": "true",
+    "max_connections": 5000,
+    "allowed_hosts": [],
+}

@@ -1,0 +1,18 @@
+{
+  "id": "campaign-11-docker-k8s-cicd",
+  "order": 11,
+  "title": "Campaign 11: Docker, Kubernetes und CI/CD",
+  "summary": "Dockerfiles, Multi-Stage-Builds, Compose, Kubernetes-Grundlagen und CI-Pipelines -- lokal, ohne Cloud-Account.",
+  "topics": [
+    "Dockerfiles", "Image layers", "Multi-stage builds", "Container security",
+    "Env vars/secrets", "Docker Compose", "Health checks", "Container networking",
+    "Resource limits", "Kubernetes Pods/Deployments/Services", "ConfigMaps/Secrets",
+    "Probes", "Rolling updates", "Autoscaling concepts", "CI pipelines",
+    "Automated tests in CI"
+  ],
+  "skill_tracks": ["containers"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-07-microservices"],
+  "boss_fight": "Containerisiere einen Python-Service und deploye ihn in eine lokale Kubernetes-Umgebung (falls verfuegbar, sonst dokumentierte Alternative).",
+  "environment_note": "Benoetigt Docker. Auf diesem System aktuell nicht verfuegbar -- siehe docs/troubleshooting.md fuer Installationsschritte, bevor diese Campaign startet."
+}

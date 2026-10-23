@@ -1,0 +1,6 @@
+{
+    "app_name": "orders-api",
+    "debug": true,
+    "max_connections": 500,
+    "allowed_hosts": ["localhost", "orders-api.internal"]
+}

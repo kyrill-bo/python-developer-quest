@@ -1,0 +1,20 @@
+{
+  "id": "campaign-01-python-fundamentals/mission-04",
+  "order": 4,
+  "title": "Discount Engine",
+  "difficulty": 2,
+  "estimated_minutes": 20,
+  "xp_reward": 15,
+  "type": "pytest",
+  "submission": "workspace/discounts.py",
+  "test_path": "tests",
+  "prerequisites": {"missions": ["campaign-01-python-fundamentals/mission-03"], "skills": {}},
+  "skills": {"python_core": 2},
+  "grants_achievement": null,
+  "hints": [
+    "Pruefe die Schwellenwerte von GROSS nach KLEIN mit elif-Kette -- sonst greift immer die erste (kleinste) Bedingung.",
+    "Teste bewusst die Grenzwerte selbst (99 vs. 100 Stueck) bevor du die Funktion fuer 'fertig' haeltst.",
+    "Schwellen: >=100 -> 20%, >=50 -> 15%, >=20 -> 10%, >=10 -> 5%, sonst 0%.",
+    "def tiered_discount(quantity: int) -> float:\n    if quantity < 0:\n        raise ValueError(\"quantity must not be negative\")\n    if quantity >= 100:\n        return 20.0\n    if quantity >= 50:\n        return 15.0\n    if quantity >= 20:\n        return 10.0\n    if quantity >= 10:\n        return 5.0\n    return 0.0"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "campaign-14-capstone",
+  "order": 14,
+  "title": "Campaign 14: Capstone -- Fleet Analytics Platform",
+  "summary": "Ein mehrstufiges Projekt, das FastAPI, PostgreSQL/SQLAlchemy, eine Daten-Ingestion-Pipeline, Event-Verarbeitung, Tests, Docker Compose und Monitoring kombiniert -- mit rein synthetischen Fleet-Maintenance-Daten.",
+  "topics": [
+    "FastAPI backend", "PostgreSQL + SQLAlchemy", "Data ingestion pipeline",
+    "Data validation", "Event-driven processing (RabbitMQ/Kafka)",
+    "Automated tests", "Docker Compose", "Structured logging", "Monitoring",
+    "CI pipeline", "Optional local Kubernetes deployment"
+  ],
+  "skill_tracks": ["system_design", "data_engineering", "microservices"],
+  "status": "planned",
+  "prerequisite_campaigns": [
+    "campaign-03-fastapi", "campaign-04-databases", "campaign-08-messaging",
+    "campaign-09-data-engineering", "campaign-11-docker-k8s-cicd"
+  ],
+  "boss_fight": "Capstone: ingest, validate, calculate analytics and expose Fleet-Maintenance-Daten ueber REST -- in Stages mit Architekturentscheidungen, Debugging und Recovery von simulierten Fehlern."
+}

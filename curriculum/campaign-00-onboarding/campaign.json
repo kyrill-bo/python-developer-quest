@@ -1,0 +1,18 @@
+{
+  "id": "campaign-00-onboarding",
+  "order": 0,
+  "title": "Campaign 0: Developer Onboarding",
+  "summary": "Inspiziere deine lokale Umgebung, baue ein reproduzierbares Python-Setup auf und lerne, wie diese Lernplattform funktioniert.",
+  "topics": [
+    "Environment inspection",
+    "Python installation",
+    "Virtual environments",
+    "pip / uv dependency management",
+    "Git basics",
+    "Automated testing basics"
+  ],
+  "skill_tracks": ["python_core", "testing"],
+  "status": "available",
+  "prerequisite_campaigns": [],
+  "boss_fight": null
+}

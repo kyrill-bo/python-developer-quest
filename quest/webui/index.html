@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python Developer Quest</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <div class="brand">Python Developer Quest</div>
+      <div id="player-summary">Laedt...</div>
+    </header>
+
+    <nav id="tabbar">
+      <button class="tab-btn active" data-tab="map">Campaign Map</button>
+      <button class="tab-btn" data-tab="mission">Aktive Mission</button>
+      <button class="tab-btn" data-tab="progress">Progress &amp; Skills</button>
+      <button class="tab-btn" data-tab="achievements">Achievements</button>
+      <button class="tab-btn" data-tab="review">Review</button>
+      <button class="tab-btn" data-tab="history">Historie</button>
+    </nav>
+
+    <main>
+      <section id="tab-map" class="tab-panel active">
+        <div id="campaign-list"></div>
+      </section>
+
+      <section id="tab-mission" class="tab-panel">
+        <div id="mission-detail">
+          <p class="muted">Waehle eine Mission in der Campaign Map.</p>
+        </div>
+      </section>
+
+      <section id="tab-progress" class="tab-panel">
+        <div id="progress-content"></div>
+      </section>
+
+      <section id="tab-achievements" class="tab-panel">
+        <div id="achievements-content"></div>
+      </section>
+
+      <section id="tab-review" class="tab-panel">
+        <div id="review-content"></div>
+      </section>
+
+      <section id="tab-history" class="tab-panel">
+        <div id="history-content"></div>
+      </section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

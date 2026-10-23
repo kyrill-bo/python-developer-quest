@@ -1,0 +1,18 @@
+{
+  "id": "campaign-08-messaging",
+  "order": 8,
+  "title": "Campaign 8: Message Brokers und Event-Driven Architecture",
+  "summary": "RabbitMQ und Apache Kafka im Vergleich: Exchanges/Queues vs. Topics/Partitions, Delivery-Semantiken, Dead-Letter-Queues, Idempotenz. Benoetigt Docker Compose.",
+  "topics": [
+    "RabbitMQ exchanges/queues/bindings/routing keys", "Acknowledgements",
+    "Dead-letter queues", "Retry strategies", "Publisher confirms",
+    "Kafka producers/consumers", "Topics and partitions", "Consumer groups",
+    "Offsets", "Rebalancing", "Delivery semantics", "Idempotent processing",
+    "Partition keys", "Ordering guarantees", "Consumer lag"
+  ],
+  "skill_tracks": ["messaging"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-07-microservices"],
+  "boss_fight": "Baue einen Order-Event-Workflow, in dem ein Order-Service Events publiziert und mehrere Consumer sie unabhaengig verarbeiten -- einmal mit RabbitMQ, einmal mit Kafka.",
+  "environment_note": "Benoetigt Docker/Docker Compose. Auf diesem System aktuell nicht verfuegbar (siehe docs/troubleshooting.md)."
+}

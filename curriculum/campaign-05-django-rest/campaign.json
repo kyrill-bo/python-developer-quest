@@ -1,0 +1,16 @@
+{
+  "id": "campaign-05-django-rest",
+  "order": 5,
+  "title": "Campaign 5: Django und Django REST Framework",
+  "summary": "Das Django-Oekosystem als zweite Framework-Perspektive neben FastAPI -- Models, Admin, Serializers, ViewSets, Permissions.",
+  "topics": [
+    "Django project structure", "Apps and settings", "Models", "Django ORM",
+    "Migrations", "Admin interface", "Serializers", "Views and ViewSets",
+    "URL routing", "Permissions", "Authentication", "Pagination", "Filtering",
+    "API testing", "DRF conventions", "FastAPI vs. DRF trade-offs"
+  ],
+  "skill_tracks": ["django", "databases"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-03-fastapi", "campaign-04-databases"],
+  "boss_fight": "Baue eine kleine Django-REST-API mit Datenbank-Persistenz, Validierung, Permissions und automatisierten Tests."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "campaign-01-python-fundamentals/mission-07",
+  "order": 7,
+  "title": "Config Loader",
+  "difficulty": 3,
+  "estimated_minutes": 30,
+  "xp_reward": 25,
+  "type": "pytest",
+  "submission": "workspace/config_loader.py",
+  "test_path": "tests",
+  "prerequisites": {"missions": ["campaign-01-python-fundamentals/mission-06"], "skills": {}},
+  "skills": {"python_core": 2},
+  "grants_achievement": null,
+  "hints": [
+    "pathlib.Path ist das moderne Python-Pendant zu java.nio.file.Path -- `Path(path).exists()` statt try/except fuer die reine Existenzpruefung.",
+    "Diese Mission hat zwei Dateien: workspace/errors.py (die Exception-Klasse) und workspace/config_loader.py (die Logik, die aus errors importiert). Das ist dein erster eigener Mehrdatei-Mini-Modul-Aufbau.",
+    "`from errors import ConfigError` funktioniert, weil beide Dateien im selben Verzeichnis liegen und die Tests dieses Verzeichnis zu sys.path hinzufuegen.",
+    "# errors.py\nclass ConfigError(Exception):\n    pass\n\n# config_loader.py\nimport json\nfrom pathlib import Path\nfrom errors import ConfigError\n\ndef load_config(path, defaults):\n    p = Path(path)\n    if not p.exists():\n        return dict(defaults)\n    try:\n        loaded = json.loads(p.read_text(encoding=\"utf-8\"))\n    except json.JSONDecodeError as exc:\n        raise ConfigError(f\"Invalid config at {path}: {exc}\") from exc\n    return {**defaults, **loaded}"
+  ]
+}

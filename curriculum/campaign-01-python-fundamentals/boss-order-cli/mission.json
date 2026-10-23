@@ -1,0 +1,23 @@
+{
+  "id": "campaign-01-python-fundamentals/boss-order-cli",
+  "order": 12,
+  "title": "BOSS FIGHT: Order Processing CLI",
+  "difficulty": 5,
+  "estimated_minutes": 120,
+  "xp_reward": 500,
+  "type": "pytest",
+  "submission": "workspace/order_cli.py",
+  "test_path": "tests",
+  "prerequisites": {
+    "missions": ["campaign-01-python-fundamentals/project-sales-report"],
+    "skills": {}
+  },
+  "skills": {"python_core": 4, "testing": 2, "python_advanced": 1},
+  "grants_achievement": "test_master",
+  "hints": [
+    "Das ist eine Komposition von drei Dingen, die du bereits einzeln gebaut hast: Validierung (Safe Order Parser), Mengenrabatt (Discount Engine) und Aggregation (Sales Aggregator / Resilient Batch Importer). Kopiere nicht wild, sondern denke in denselben Bausteinen neu.",
+    "Pipeline: load_orders (Datei -> Liste roher dicts) -> validate_order (pro Order, raise bei Fehler) -> discount_percent (Mengenrabatt) -> order_total (Rabatt anwenden) -> process_orders (orchestriert alles, trennt processed/rejected) -> main (CLI-Einstiegspunkt, liest argv, druckt JSON, gibt Exit-Code zurueck).",
+    "process_orders darf bei einer fehlerhaften Order NICHT abbrechen (Quarantine-Pattern aus Mission 10). grand_total ist die Summe aller 'total'-Werte der GUELTIGEN Orders, auf 2 Nachkommastellen gerundet.",
+    "Grob-Skelett:\n\nclass OrderValidationError(Exception): pass\n\ndef validate_order(raw: dict) -> dict: ...  # order_id, quantity, unit_price pruefen, raise bei Fehler\ndef discount_percent(quantity: int) -> float: ...  # gleiche Stufen wie Mission 4\ndef order_total(order: dict) -> float:\n    subtotal = order[\"quantity\"] * order[\"unit_price\"]\n    return round(subtotal * (1 - discount_percent(order[\"quantity\"]) / 100), 2)\ndef process_orders(raw_orders: list[dict]) -> dict:\n    processed, rejected = [], []\n    for raw in raw_orders:\n        try:\n            order = validate_order(raw)\n        except OrderValidationError as exc:\n            rejected.append({\"order\": raw, \"reason\": str(exc)})\n            continue\n        order[\"total\"] = order_total(order)\n        processed.append(order)\n    grand_total = round(sum(o[\"total\"] for o in processed), 2)\n    return {\"processed\": processed, \"rejected\": rejected, \"grand_total\": grand_total}\ndef load_orders(path: str) -> list[dict]: ...\ndef main(argv: list[str]) -> int: ...  # Usage, FileNotFoundError -> Exit 2, sonst JSON-Output + Exit 0"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "campaign-00-onboarding/mission-04-dependencies",
+  "order": 4,
+  "title": "Dependency Lockdown",
+  "difficulty": 2,
+  "estimated_minutes": 15,
+  "xp_reward": 15,
+  "type": "check_script",
+  "check_function": "dependency_lockdown",
+  "prerequisites": {"missions": ["campaign-00-onboarding/mission-03-venv"], "skills": {}},
+  "skills": {"python_core": 1, "testing": 1},
+  "grants_achievement": null,
+  "hints": [
+    "pyproject.toml im Projekt-Root definiert bereits eine `dev`-Extra-Gruppe mit pytest, ruff und mypy. Das ist das Python-Pendant zu einem Gradle 'testImplementation'-Scope.",
+    "Mit `uv` installierst du ein Extra so: `uv pip install -e \".[dev]\"` -- fuehre das im Projekt-Root aus, nachdem die .venv existiert.",
+    "Falls du kein editable-install willst: `uv pip install pytest ruff mypy` installiert direkt in die aktive .venv.",
+    "Pruefe danach `.venv/bin/pytest --version` und `.venv/bin/ruff --version` manuell -- beide muessen ohne Fehler eine Versionsnummer ausgeben."
+  ]
+}

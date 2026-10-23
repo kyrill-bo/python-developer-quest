@@ -1,0 +1,20 @@
+{
+  "id": "campaign-01-python-fundamentals/mission-03",
+  "order": 3,
+  "title": "Customer Deduplicator",
+  "difficulty": 2,
+  "estimated_minutes": 25,
+  "xp_reward": 15,
+  "type": "pytest",
+  "submission": "workspace/customers.py",
+  "test_path": "tests",
+  "prerequisites": {"missions": ["campaign-01-python-fundamentals/mission-02"], "skills": {}},
+  "skills": {"python_core": 2},
+  "grants_achievement": null,
+  "hints": [
+    "Vergleiche E-Mails case-insensitive (email.lower()), aber speichere den ORIGINAL-Eintrag unveraendert im Ergebnis.",
+    "Ein dict mit lower-case-email als Key und dem Original-dict als Value eignet sich, um 'erstes Vorkommen gewinnt' zu garantieren -- ueberschreibe den Key nur, wenn er noch nicht existiert.",
+    "Die Domain einer E-Mail ist alles nach dem '@'. `email.split('@')[1].lower()` reicht fuer dieses Szenario.",
+    "def dedupe_customers(customers):\n    seen: dict[str, dict] = {}\n    domains: set[str] = set()\n    for c in customers:\n        if \"email\" not in c:\n            raise ValueError(\"customer missing 'email' field\")\n        key = c[\"email\"].lower()\n        if key not in seen:\n            seen[key] = c\n        domains.add(key.split(\"@\")[1])\n    return list(seen.values()), domains"
+  ]
+}

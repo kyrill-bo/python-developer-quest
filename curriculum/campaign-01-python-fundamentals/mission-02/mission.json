@@ -1,0 +1,20 @@
+{
+  "id": "campaign-01-python-fundamentals/mission-02",
+  "order": 2,
+  "title": "Inventory Scanner",
+  "difficulty": 1,
+  "estimated_minutes": 25,
+  "xp_reward": 10,
+  "type": "pytest",
+  "submission": "workspace/inventory.py",
+  "test_path": "tests",
+  "prerequisites": {"missions": ["campaign-01-python-fundamentals/mission-01"], "skills": {}},
+  "skills": {"python_core": 2},
+  "grants_achievement": null,
+  "hints": [
+    "tuple[str, int] ist wie ein Kotlin Pair<String, Int> -- unveraenderlich, destrukturierbar: `for sku, qty in items:`.",
+    "Aggregiere zuerst pro SKU in ein dict[str, int], BEVOR du low-stock bestimmst -- sonst zaehlst du doppelte SKU-Eintraege falsch.",
+    "dict.get(key, 0) + qty ist der uebliche Python-Weg, um in einer Schleife zu akkumulieren, ohne vorher pruefen zu muessen, ob der Key existiert.",
+    "def scan_inventory(items, low_stock_threshold=5):\n    if not items:\n        raise ValueError(\"items must not be empty\")\n    totals: dict[str, int] = {}\n    for sku, qty in items:\n        totals[sku] = totals.get(sku, 0) + qty\n    low_stock = sorted(sku for sku, qty in totals.items() if qty < low_stock_threshold)\n    return {\"total_quantity\": sum(totals.values()), \"low_stock_skus\": low_stock, \"distinct_skus\": len(totals)}"
+  ]
+}

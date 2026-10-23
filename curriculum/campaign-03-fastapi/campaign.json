@@ -1,0 +1,18 @@
+{
+  "id": "campaign-03-fastapi",
+  "order": 3,
+  "title": "Campaign 3: REST API Engineer (FastAPI)",
+  "summary": "Von einem FastAPI-Prototyp zu einem produktionsnahen Service: Routing, Pydantic-Validierung, Dependency Injection, Auth, OpenAPI, Pagination.",
+  "topics": [
+    "HTTP fundamentals", "REST conventions", "Routing, path/query params",
+    "Request/response models", "Pydantic validation", "HTTP status codes",
+    "Error handling", "Dependency injection", "API versioning",
+    "OpenAPI docs", "Pagination, filtering, sorting", "Authentication",
+    "Authorization", "Middleware", "CORS", "Rate limiting concepts",
+    "Automated API tests"
+  ],
+  "skill_tracks": ["fastapi", "testing"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-02-advanced-python"],
+  "boss_fight": "Baue eine getestete REST API fuer Produkt- und Bestellverwaltung."
+}

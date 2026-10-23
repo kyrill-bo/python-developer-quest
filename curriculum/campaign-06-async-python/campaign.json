@@ -1,0 +1,17 @@
+{
+  "id": "campaign-06-async-python",
+  "order": 6,
+  "title": "Campaign 6: Asynchronous Python",
+  "summary": "async/await, asyncio, nebenlaeufige I/O, Timeouts/Cancellation und async Testing -- am Beispiel paralleler Aufrufe externer Services.",
+  "topics": [
+    "Sync vs. async execution", "async/await", "Coroutines", "Event loop",
+    "asyncio", "Concurrent I/O", "Task cancellation", "Timeouts",
+    "Async HTTP clients", "Async database access", "Connection pooling",
+    "Background processing", "Concurrency hazards", "Error propagation",
+    "Testing asynchronous code"
+  ],
+  "skill_tracks": ["async"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-02-advanced-python"],
+  "boss_fight": "Baue einen asynchronen Data Collector, der mehrere Mock-Services abfragt, Timeouts behandelt und ein konsolidiertes Ergebnis liefert."
+}

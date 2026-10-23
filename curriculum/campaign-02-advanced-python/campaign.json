@@ -1,0 +1,16 @@
+{
+  "id": "campaign-02-advanced-python",
+  "order": 2,
+  "title": "Campaign 2: Advanced Python",
+  "summary": "OOP-Design, Typing, Decorators, Context Manager und Tooling (ruff/mypy) jenseits der Fundamentals -- inklusive Refactoring-Missionen an absichtlich schlechtem Code.",
+  "topics": [
+    "Object-oriented programming", "Composition vs. inheritance", "Dataclasses",
+    "Type hints, Optional/Union, Protocols, Generics", "Decorators",
+    "Context managers", "Exception design", "Logging",
+    "Packaging and project structure", "Ruff / mypy static analysis"
+  ],
+  "skill_tracks": ["python_advanced"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-01-python-fundamentals"],
+  "boss_fight": "Refactoriere eine schlecht strukturierte Python-Anwendung in eine typisierte, getestete Anwendung mit klaren Verantwortlichkeiten."
+}

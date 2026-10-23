@@ -1,0 +1,19 @@
+{
+  "id": "campaign-00-onboarding/mission-01-recon",
+  "order": 1,
+  "title": "Environment Recon",
+  "difficulty": 1,
+  "estimated_minutes": 15,
+  "xp_reward": 10,
+  "type": "check_script",
+  "check_function": "env_check_recon",
+  "prerequisites": {"missions": [], "skills": {}},
+  "skills": {"python_core": 1},
+  "grants_achievement": null,
+  "hints": [
+    "Du brauchst keine Python-Logik -- nur Shell-Befehle und eine JSON-Datei. python3 --version, pip --version/pip3 --version und git --version liefern dir alles.",
+    "Nutze das Modul json aus der Standardbibliothek oder schreibe die Datei direkt per Editor/Texteditor -- Hauptsache gueltiges JSON mit exakt diesen vier Keys: python_version, pip_available, git_available, platform.",
+    "python_version muss mit 'MAJOR.MINOR' beginnen, z.B. '3.14' -- nicht die volle Version mit Patch-Level. platform.system() in Python liefert dir exakt den String, den die Pruefung erwartet (z.B. 'Darwin', 'Linux', 'Windows').",
+    "Minimalbeispiel: {\"python_version\": \"3.14\", \"pip_available\": true, \"git_available\": true, \"platform\": \"Darwin\"} -- ersetze die Werte durch deine echten Befunde, rate nicht."
+  ]
+}

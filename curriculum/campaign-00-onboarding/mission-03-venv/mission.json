@@ -1,0 +1,19 @@
+{
+  "id": "campaign-00-onboarding/mission-03-venv",
+  "order": 3,
+  "title": "Isolation Protocol",
+  "difficulty": 1,
+  "estimated_minutes": 10,
+  "xp_reward": 15,
+  "type": "check_script",
+  "check_function": "isolation_protocol",
+  "prerequisites": {"missions": ["campaign-00-onboarding/mission-02-first-script"], "skills": {}},
+  "skills": {"python_core": 1},
+  "grants_achievement": null,
+  "hints": [
+    "In der JVM-Welt isoliert ihr Projekte ueber Gradle/Maven-Dependency-Scopes pro Projekt. Python isoliert stattdessen den kompletten Interpreter + Packages pro Projekt in einem 'virtual environment'.",
+    "Du hast bereits `uv` auf diesem System (geprueft in der Environment Recon -- falls nicht, nutze `python3 -m venv .venv`).",
+    "Fuehre im PROJEKT-ROOT (nicht in curriculum/...) aus: `uv venv` -- das erzeugt `.venv/` mit einem eigenen Python-Interpreter.",
+    "Nach `uv venv` sollte `.venv/bin/python3` existieren. Pruefe mit `ls .venv/bin`. Du musst die venv noch nicht aktivieren -- die Pruefung schaut nur, ob sie existiert."
+  ]
+}

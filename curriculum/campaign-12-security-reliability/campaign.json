@@ -1,0 +1,18 @@
+{
+  "id": "campaign-12-security-reliability",
+  "order": 12,
+  "title": "Campaign 12: Security und Production Reliability",
+  "summary": "AuthN/AuthZ, OAuth2/OIDC, JWT, Input-Validierung, Rate Limiting, Resilienz-Patterns -- geuebt gegen absichtlich verwundbare, lokale Trainings-Targets.",
+  "topics": [
+    "AuthN vs. AuthZ", "OAuth2/OIDC concepts", "JWT validation", "RBAC",
+    "Input validation", "SQL injection prevention", "Secure configuration",
+    "Secrets management", "Dependency vulnerability scanning", "Rate limiting",
+    "Timeouts/retries/retry storms", "Idempotency", "Structured logging/metrics",
+    "Distributed tracing concepts", "Health checks", "Graceful shutdown",
+    "Resource exhaustion"
+  ],
+  "skill_tracks": ["security", "observability"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-11-docker-k8s-cicd"],
+  "boss_fight": "Diagnostiziere und reparier eine absichtlich unzuverlaessige API mit Logs, Tests, Health Checks und kontrollierten Failure-Simulationen."
+}

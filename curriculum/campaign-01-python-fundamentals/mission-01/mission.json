@@ -1,0 +1,20 @@
+{
+  "id": "campaign-01-python-fundamentals/mission-01",
+  "order": 1,
+  "title": "Price Tag Formatter",
+  "difficulty": 1,
+  "estimated_minutes": 20,
+  "xp_reward": 10,
+  "type": "pytest",
+  "submission": "workspace/pricing.py",
+  "test_path": "tests",
+  "prerequisites": {"missions": ["campaign-00-onboarding/assessment"], "skills": {}},
+  "skills": {"python_core": 2},
+  "grants_achievement": null,
+  "hints": [
+    "f-strings sind Pythons String-Interpolation, vergleichbar mit Kotlins \"$variable\" -- aber mit expliziten Format-Specs wie f\"{value:.2f}\" fuer zwei Nachkommastellen.",
+    "Rabatt anwenden: discounted = amount * (1 - discount_percent / 100). Runde NICHT selbst mit round() UND Format-String gleichzeitig unnoetig doppelt -- die Format-Spec :.2f rundet bereits fuer die Darstellung.",
+    "Validierung passiert VOR der Berechnung: wenn amount < 0 oder discount_percent nicht in [0, 100] liegt, raise ValueError(...) mit einer sprechenden Message.",
+    "def format_price(amount: float, currency: str = \"EUR\", discount_percent: float = 0.0) -> str:\n    if amount < 0:\n        raise ValueError(\"amount must not be negative\")\n    if not (0 <= discount_percent <= 100):\n        raise ValueError(\"discount_percent must be between 0 and 100\")\n    discounted = amount * (1 - discount_percent / 100)\n    return f\"{discounted:.2f} {currency}\""
+  ]
+}

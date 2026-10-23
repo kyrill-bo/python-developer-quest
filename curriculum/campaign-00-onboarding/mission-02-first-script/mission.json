@@ -1,0 +1,19 @@
+{
+  "id": "campaign-00-onboarding/mission-02-first-script",
+  "order": 2,
+  "title": "First Contact",
+  "difficulty": 1,
+  "estimated_minutes": 15,
+  "xp_reward": 10,
+  "type": "check_script",
+  "check_function": "first_script_contact",
+  "prerequisites": {"missions": ["campaign-00-onboarding/mission-01-recon"], "skills": {}},
+  "skills": {"python_core": 2},
+  "grants_achievement": "first_python_function",
+  "hints": [
+    "In Kotlin wuerdest du `fun greet(name: String): String`. In Python: `def greet(name: str) -> str:` -- Type Hints sind optional, aber wir gewoehnen uns direkt daran.",
+    "sys.argv ist die Python-Entsprechung von Kotlins `args: Array<String>` in `main`. sys.argv[0] ist der Skriptname, sys.argv[1] waere das erste echte Argument.",
+    "Struktur: `if __name__ == \"__main__\":` ist Pythons Pendant zu einem expliziten main()-Entry-Point. Darin: pruefe len(sys.argv), waehle 'World' als Default, rufe greet() auf und drucke das Ergebnis mit print().",
+    "import sys\n\ndef greet(name: str) -> str:\n    return f\"Hello, {name}! Welcome to Python Developer Quest.\"\n\nif __name__ == \"__main__\":\n    name = sys.argv[1] if len(sys.argv) > 1 else \"World\"\n    print(greet(name))"
+  ]
+}

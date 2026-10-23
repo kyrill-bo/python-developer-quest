@@ -1,0 +1,59 @@
+{
+  "first_python_function": {
+    "title": "First Python Function",
+    "description": "Deine erste selbst geschriebene und automatisch verifizierte Python-Funktion."
+  },
+  "environment_operator": {
+    "title": "Environment Operator",
+    "description": "Onboarding abgeschlossen: venv, Dependencies und ein kaputtes Setup erfolgreich diagnostiziert."
+  },
+  "test_master": {
+    "title": "Test Master",
+    "description": "Eine Mission mit vollstaendiger automatisierter Testabdeckung bestanden."
+  },
+  "first_type_safe_api": {
+    "title": "First Type-Safe API",
+    "description": "Eine erste FastAPI-Route mit validierten Pydantic-Modellen implementiert.",
+    "campaign": "campaign-03-fastapi"
+  },
+  "first_database_integration": {
+    "title": "First Database Integration",
+    "description": "Eine Anwendung erfolgreich an PostgreSQL angebunden.",
+    "campaign": "campaign-04-databases"
+  },
+  "async_explorer": {
+    "title": "Async Explorer",
+    "description": "Nebenlaeufige I/O-Operationen mit asyncio korrekt orchestriert.",
+    "campaign": "campaign-06-async-python"
+  },
+  "message_broker_operator": {
+    "title": "Message Broker Operator",
+    "description": "Events zuverlaessig ueber RabbitMQ oder Kafka publiziert und konsumiert.",
+    "campaign": "campaign-08-messaging"
+  },
+  "pipeline_architect": {
+    "title": "Pipeline Architect",
+    "description": "Eine vollstaendige Datenpipeline von Ingestion bis Analyse gebaut.",
+    "campaign": "campaign-09-data-engineering"
+  },
+  "docker_operator": {
+    "title": "Docker Operator",
+    "description": "Einen Service containerisiert und erfolgreich betrieben.",
+    "campaign": "campaign-11-docker-k8s-cicd"
+  },
+  "security_guardian": {
+    "title": "Security Guardian",
+    "description": "Eine absichtlich verwundbare Anwendung identifiziert und abgesichert.",
+    "campaign": "campaign-12-security-reliability"
+  },
+  "production_ready": {
+    "title": "Production Ready",
+    "description": "Einen Service mit Resilienz-Patterns (Retries, Timeouts, Health Checks) ausgestattet.",
+    "campaign": "campaign-13-system-design"
+  },
+  "architecture_boss_slayer": {
+    "title": "Architecture Boss Slayer",
+    "description": "Eine komplette Systemarchitektur entworfen, begruendet und gegen Review verteidigt.",
+    "campaign": "campaign-13-system-design"
+  }
+}

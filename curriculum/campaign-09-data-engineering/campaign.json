@@ -1,0 +1,18 @@
+{
+  "id": "campaign-09-data-engineering",
+  "order": 9,
+  "title": "Campaign 9: Data Pipelines und Data Engineering",
+  "summary": "ETL/ELT, Validierung, Quarantaene, Checkpointing und Reprocessing anhand synthetischer Fleet-Maintenance-Daten -- besonders relevant fuer die Zielrolle.",
+  "topics": [
+    "ETL/ELT", "Batch vs. incremental processing", "Data ingestion/transformation",
+    "Data validation/quality", "Schema validation", "Deduplication",
+    "Idempotent processing", "Checkpointing", "Retry/recovery",
+    "Malformed records", "Structured logging", "Data lineage concepts",
+    "SQL-based aggregation", "Pandas fundamentals", "Backfills",
+    "Reprocessing", "Late-arriving data", "Basic orchestration concepts"
+  ],
+  "skill_tracks": ["data_engineering", "databases"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-04-databases", "campaign-06-async-python"],
+  "boss_fight": "Baue eine vollstaendige Datenpipeline: synthetische Daten einlesen, validieren, transformieren, speichern und per REST API analytisch bereitstellen."
+}

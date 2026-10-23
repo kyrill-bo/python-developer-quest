@@ -1,0 +1,19 @@
+{
+  "id": "campaign-07-microservices",
+  "order": 7,
+  "title": "Campaign 7: Microservices Architect",
+  "summary": "Service-Grenzen, Kommunikation, Resilienz-Patterns (Retries, Timeouts, Circuit Breaker) anhand einer fiktiven E-Commerce-Plattform -- beginnend mit zwei Services.",
+  "topics": [
+    "Service boundaries", "Domain modeling", "Separation of concerns",
+    "REST communication", "Sync vs. async communication",
+    "Service-to-service auth", "Config management", "Database per service",
+    "Distributed transactions", "Saga pattern", "Idempotency", "Retries",
+    "Timeouts", "Circuit breakers", "Graceful degradation", "API contracts",
+    "Integration/contract testing", "Version compatibility",
+    "Service discovery concepts"
+  ],
+  "skill_tracks": ["microservices", "fastapi"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-03-fastapi", "campaign-04-databases", "campaign-06-async-python"],
+  "boss_fight": "Entwirf und implementiere ein kleines, containerisiertes Multi-Service-System mit klaren Service-Grenzen und dokumentiertem Failure-Verhalten."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "campaign-10-testing-quality",
+  "order": 10,
+  "title": "Campaign 10: Testing und Software Quality",
+  "summary": "pytest-Fortgeschrittenentechniken (Fixtures, Mocking, Parametrisierung), Contract-Testing-Konzepte und die Faehigkeit, schlecht getesteten Code gezielt abzusichern.",
+  "topics": [
+    "pytest fixtures/parametrization/mocking", "Unit vs. integration testing",
+    "API/database testing", "Contract testing", "Property-based testing concepts",
+    "Test isolation", "Coverage (und seine Grenzen)", "Regression testing",
+    "Mutation testing concepts", "Static analysis", "Code review"
+  ],
+  "skill_tracks": ["testing"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-03-fastapi"],
+  "boss_fight": "Erhalte einen schlecht getesteten Service und verbessere seine Zuverlaessigkeit, ohne ihn unnoetig komplett neu zu schreiben."
+}

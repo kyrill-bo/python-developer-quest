@@ -1,0 +1,18 @@
+{
+  "id": "campaign-13-system-design",
+  "order": 13,
+  "title": "Campaign 13: System Design und Senior Engineering",
+  "summary": "Architekturentscheidungen begruenden und verteidigen: Skalierbarkeit, Verfuegbarkeit, Datenkonsistenz, ADRs -- anhand realistischer Architekturprobleme.",
+  "topics": [
+    "Requirements analysis", "Architecture decisions", "Service boundaries",
+    "Scalability/availability/reliability", "Data consistency",
+    "Event-driven architecture", "API/database trade-offs",
+    "Performance bottlenecks", "Observability", "Capacity planning",
+    "Technical debt", "Migration strategies", "Code review",
+    "Mentoring/technical communication"
+  ],
+  "skill_tracks": ["system_design"],
+  "status": "planned",
+  "prerequisite_campaigns": ["campaign-07-microservices", "campaign-09-data-engineering", "campaign-12-security-reliability"],
+  "boss_fight": "Entwerfe ein komplettes Backend-System aus einem schriftlichen Anforderungsdokument: Architektur, API-Vertraege, Schema, Failure-Handling, Security, Test- und Deployment-Strategie, ADRs."
+}

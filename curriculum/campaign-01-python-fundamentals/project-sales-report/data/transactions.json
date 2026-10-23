@@ -1,0 +1,12 @@
+[
+  {"category": "electronics", "amount": 120.50, "region": "EU"},
+  {"category": "electronics", "amount": 75.00, "region": "US"},
+  {"category": "books", "amount": 15.99, "region": "EU"},
+  {"category": "books", "amount": 9.99, "region": "APAC"},
+  {"category": "toys", "amount": 45.00, "region": "US"},
+  {"category": "electronics", "amount": 300.00, "region": "EU"},
+  {"category": "books", "amount": 12.50, "region": "US"},
+  {"category": "toys", "amount": 22.75, "region": "APAC"},
+  {"category": "electronics", "amount": 60.00, "region": "US"},
+  {"category": "toys", "amount": 18.00, "region": "EU"}
+]

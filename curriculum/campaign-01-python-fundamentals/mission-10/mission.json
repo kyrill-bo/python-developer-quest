@@ -1,0 +1,20 @@
+{
+  "id": "campaign-01-python-fundamentals/mission-10",
+  "order": 10,
+  "title": "Resilient Batch Importer",
+  "difficulty": 3,
+  "estimated_minutes": 30,
+  "xp_reward": 25,
+  "type": "pytest",
+  "submission": "workspace/batch_importer.py",
+  "test_path": "tests",
+  "prerequisites": {"missions": ["campaign-01-python-fundamentals/mission-09"], "skills": {}},
+  "skills": {"python_core": 2, "python_advanced": 1},
+  "grants_achievement": null,
+  "hints": [
+    "Das ist das 'Quarantine Pattern', das du in Campaign 9 (Data Engineering) in groesserem Rahmen wiedersiehst: ein schlechter Datensatz darf den ganzen Batch nicht stoppen.",
+    "Schleife ueber alle records, pro record ein try/except -- bei Erfolg in valid anhaengen, bei Fehler ein {'record':..., 'reason':...} in invalid anhaengen. KEIN return/break bei einem Fehler.",
+    "Validierungsregeln: 'sku' muss ein nicht-leerer String sein, 'qty' muss ein positiver int sein. Nutze eine kleine Hilfsfunktion, die bei Verstoss eine ValueError mit Grund wirft.",
+    "def _validate(record):\n    sku = record.get(\"sku\")\n    if not isinstance(sku, str) or not sku:\n        raise ValueError(\"invalid or missing sku\")\n    qty = record.get(\"qty\")\n    if not isinstance(qty, int) or isinstance(qty, bool) or qty <= 0:\n        raise ValueError(\"invalid or missing qty\")\n    return {\"sku\": sku, \"qty\": qty}\n\ndef import_batch(records):\n    valid, invalid = [], []\n    for record in records:\n        try:\n            valid.append(_validate(record))\n        except ValueError as exc:\n            invalid.append({\"record\": record, \"reason\": str(exc)})\n    return valid, invalid"
+  ]
+}

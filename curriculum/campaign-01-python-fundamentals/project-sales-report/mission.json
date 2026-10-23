@@ -1,0 +1,34 @@
+{
+  "id": "campaign-01-python-fundamentals/project-sales-report",
+  "order": 11,
+  "title": "Mini-Project: Sales Report Generator",
+  "difficulty": 4,
+  "estimated_minutes": 90,
+  "xp_reward": 250,
+  "type": "pytest",
+  "submission": "workspace/report.py",
+  "test_path": "tests",
+  "prerequisites": {
+    "missions": [
+      "campaign-01-python-fundamentals/mission-01",
+      "campaign-01-python-fundamentals/mission-02",
+      "campaign-01-python-fundamentals/mission-03",
+      "campaign-01-python-fundamentals/mission-04",
+      "campaign-01-python-fundamentals/mission-05",
+      "campaign-01-python-fundamentals/mission-06",
+      "campaign-01-python-fundamentals/mission-07",
+      "campaign-01-python-fundamentals/mission-08",
+      "campaign-01-python-fundamentals/mission-09",
+      "campaign-01-python-fundamentals/mission-10"
+    ],
+    "skills": {}
+  },
+  "skills": {"python_core": 4, "testing": 1},
+  "grants_achievement": null,
+  "hints": [
+    "Baue 5 kleine, einzeln testbare Funktionen statt einer grossen -- genau wie bei den vorherigen Missionen. Jede Funktion macht EINE Sache.",
+    "load_transactions liest eine JSON-Datei und gibt die Liste zurueck -- lass FileNotFoundError einfach durchreichen (propagieren), das ist hier kein Fehlerfall, den du selbst behandeln musst.",
+    "revenue_by_category und top_region nutzen beide das gleiche Aggregationsmuster, das du aus Mission 'Sales Aggregator' kennst. build_report ruft nur die anderen Funktionen auf und packt die Ergebnisse in ein dict zusammen.",
+    "Grob-Skelett:\n\ndef load_transactions(path: str) -> list[dict]: ...\ndef total_revenue(transactions: list[dict]) -> float: ...\ndef revenue_by_category(transactions: list[dict]) -> dict[str, float]: ...\ndef top_region(transactions: list[dict]) -> str:\n    # raise ValueError, wenn transactions leer ist\n    ...\ndef build_report(transactions: list[dict]) -> dict:\n    return {\n        \"total_revenue\": round(total_revenue(transactions), 2),\n        \"by_category\": {k: round(v, 2) for k, v in revenue_by_category(transactions).items()},\n        \"top_region\": top_region(transactions),\n    }\ndef write_report(report: dict, path: str) -> None: ..."
+  ]
+}

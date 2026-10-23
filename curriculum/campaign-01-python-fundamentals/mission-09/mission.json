@@ -1,0 +1,20 @@
+{
+  "id": "campaign-01-python-fundamentals/mission-09",
+  "order": 9,
+  "title": "API Response Normalizer",
+  "difficulty": 3,
+  "estimated_minutes": 30,
+  "xp_reward": 25,
+  "type": "pytest",
+  "submission": "workspace/normalizer.py",
+  "test_path": "tests",
+  "prerequisites": {"missions": ["campaign-01-python-fundamentals/mission-08"], "skills": {}},
+  "skills": {"python_core": 2},
+  "grants_achievement": null,
+  "hints": [
+    "Reale APIs sind inkonsistent: manche liefern snake_case, andere camelCase. `raw.get(\"order_id\") or raw.get(\"orderId\")` deckt beide Faelle ab.",
+    "datetime.fromisoformat(s) parst ISO-8601-Strings direkt in ein datetime-Objekt -- kein externes Paket noetig (anders als du es vielleicht von Jackson/Kotlinx.serialization kennst).",
+    "amount kann als String ODER Zahl ankommen -- `float(raw_amount)` normalisiert beides. Wenn das fehlschlaegt (ValueError/TypeError), ist das ein Datenfehler.",
+    "class NormalizationError(Exception):\n    pass\n\ndef normalize_order(raw: dict) -> dict:\n    order_id = raw.get(\"order_id\") or raw.get(\"orderId\")\n    if not order_id:\n        raise NormalizationError(\"missing order id\")\n    raw_amount = raw.get(\"amount\")\n    if raw_amount is None:\n        raise NormalizationError(\"missing amount\")\n    amount = float(raw_amount)\n    created_raw = raw.get(\"created_at\") or raw.get(\"createdAt\")\n    created_at = datetime.fromisoformat(created_raw) if created_raw else None\n    return {\"order_id\": str(order_id), \"amount\": amount, \"created_at\": created_at}"
+  ]
+}

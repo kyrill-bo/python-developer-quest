@@ -1,0 +1,25 @@
+{
+  "id": "campaign-01-python-fundamentals",
+  "order": 1,
+  "title": "Campaign 1: Python Fundamentals",
+  "summary": "Variablen, Collections, Kontrollfluss, Funktionen, Exceptions, Dateien, Module, Comprehensions, Generatoren und JSON -- anhand realistischer Backend-Szenarien rund um Bestellungen und Verkaufsdaten.",
+  "topics": [
+    "Variables and data types",
+    "Strings and formatting",
+    "Lists, tuples, dictionaries, sets",
+    "Conditions and loops",
+    "Functions, default args, *args/**kwargs",
+    "Scope",
+    "Exceptions and custom exception types",
+    "File handling",
+    "Modules and imports",
+    "List/dict/set comprehensions",
+    "Iterators and generators",
+    "Working with JSON",
+    "Standard library essentials (datetime, pathlib, collections)"
+  ],
+  "skill_tracks": ["python_core"],
+  "status": "available",
+  "prerequisite_campaigns": ["campaign-00-onboarding"],
+  "boss_fight": "Baue ein CLI-Tool, das strukturierte Bestelldaten einliest, validiert, Summen berechnet und Fehler robust behandelt -- inklusive eigener Tests."
+}

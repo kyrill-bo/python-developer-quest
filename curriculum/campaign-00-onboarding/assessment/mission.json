@@ -1,0 +1,29 @@
+{
+  "id": "campaign-00-onboarding/assessment",
+  "order": 7,
+  "title": "Onboarding Assessment",
+  "difficulty": 2,
+  "estimated_minutes": 20,
+  "xp_reward": 30,
+  "type": "check_script",
+  "check_function": "onboarding_assessment",
+  "prerequisites": {
+    "missions": [
+      "campaign-00-onboarding/mission-01-recon",
+      "campaign-00-onboarding/mission-02-first-script",
+      "campaign-00-onboarding/mission-03-venv",
+      "campaign-00-onboarding/mission-04-dependencies",
+      "campaign-00-onboarding/mission-05-first-test",
+      "campaign-00-onboarding/mission-06-broken-env"
+    ],
+    "skills": {}
+  },
+  "skills": {"python_core": 2, "testing": 1},
+  "grants_achievement": null,
+  "hints": [
+    "Baue ein JSON-Objekt mit genau vier Keys und drucke es mit print(json.dumps(...)) -- eine einzige Zeile auf stdout, sonst nichts.",
+    "python_version: f\"{sys.version_info.major}.{sys.version_info.minor}\". venv_active: sys.prefix != sys.base_prefix (True, wenn das Skript mit dem venv-Python laeuft).",
+    "pytest_installed: importlib.util.find_spec(\"pytest\") is not None. ruff_installed: shutil.which(\"ruff\") is not None (ruff ist primaer ein Binary, kein importierbares Modul).",
+    "import json, sys, shutil, importlib.util\n\nreport = {\n    \"python_version\": f\"{sys.version_info.major}.{sys.version_info.minor}\",\n    \"venv_active\": sys.prefix != sys.base_prefix,\n    \"pytest_installed\": importlib.util.find_spec(\"pytest\") is not None,\n    \"ruff_installed\": shutil.which(\"ruff\") is not None,\n}\nprint(json.dumps(report))"
+  ]
+}
